@@ -6,8 +6,11 @@ int main() {
 
     double angka1, angka2;
     char operasi;
+    char pilihan;
 
-    std::cout << "=== KALKULATOR CLI ===" << endl;
+    do {
+
+    std::cout << "\n=== KALKULATOR CLI ===" << endl;
     std::cout << "Ini adalah sebuah kalkulator CLi alias berbasis perintah doang" << endl;
     std::cout << "Operator (+) untuk menambah angka" << endl;
     std::cout << "Operator (-) untuk mengurang angka" << endl;
@@ -43,5 +46,15 @@ int main() {
             std::cout << "Operatornya salah kocak" << endl;
             break;
     }
+
+    std::cout << "\nApakah anda ingin lanjut? (y/n): ";
+    std::cin >> pilihan;
+
+    } while (pilihan == 'y' || pilihan == 'Y');
+
+    std::cin.ignore(100, '\n');
+    std::cout << "Program selesai" << endl;
+    std::cout << "Tekan Enter untuk Keluar ... ";
+    std::cin.get();
     return 0;
 }   
