@@ -10,11 +10,11 @@ const text = 'Ada ' + mahasiswaTI.length + ' mahasiswa di prodi TI.'; // Output 
 console.log(text);
 
 // Output juga akan manghasilkan apakah ada seseorang dengan nama tertentu dalam array dengan true or false
-const hasDepin = mahasiswaTI.includes('depin');
-console.log('Ada devin?', hasDepin)
+const hasDepin = mahasiswaTI.includes('depin'); 
+console.log('Ada devin?', hasDepin) // bakal true karena ada dalam array
 
-const hasPasya = mahasiswaTI.includes('pasya');
-console.log('Ada Pasya?', hasPasya);
+const hasPasya = mahasiswaTI.includes('pasya'); 
+console.log('Ada Pasya?', hasPasya); // false karena ga ada
 
 
 if (mahasiswaTI.includes('depin')) {
