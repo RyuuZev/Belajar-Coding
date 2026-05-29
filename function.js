@@ -1,6 +1,6 @@
 function sayHBD (name, age) {
     console.log('Selamat ulang tahun ke ' + age + ' ' + name + '!');
-}
+};
 
 sayHBD('Pasya', 19);
 
@@ -15,7 +15,7 @@ function cekAngka (angka) {
     } else {
         console.log('Bukan angka');
     }
-}
+};
 
 cekAngka(-1);
 cekAngka(0);
@@ -26,7 +26,7 @@ cekAngka('Anjay');
 function fungsiTambah (a, b) {
     hasil = a + b;
     console.log(`${a} ditambah ${b} sama dengan ${hasil}`)
-}
+};
 
 fungsiTambah(1, 1);
 fungsiTambah(1, 11);
@@ -48,7 +48,7 @@ console.log(namaLengkap);
 
 function getString() {
     return 'KATA';
-}
+};
 
 const coba = getString();
 console.log(coba) // hasilnya akan "KATA"
@@ -56,9 +56,27 @@ console.log(coba) // hasilnya akan "KATA"
 
 function get2Angka(x, y) {
     return x * y;
-}
+};
 
 const Hasil = get2Angka(2, 22);
 console.log(Hasil)
 
 console.log(get2Angka(10, 10));
+
+
+// Arrow function
+
+const sayBye = name => {
+    console.log("Bye, " + name);
+};
+
+const add = (x, y) => x + y;
+
+console.log(add(10, 5));
+
+
+const namaUmur = (name, num) => name + num;
+
+const iniDia = namaUmur('pasya', 2)
+
+console.log(iniDia.name)
