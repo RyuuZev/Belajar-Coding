@@ -1,6 +1,8 @@
 #include "function.h"
+#include <locale.h>
 
 void cekSaldo(long long saldo_user) {
+    
     std::cout << HIJAU << "Saldo Anda saat ini : Rp " << saldo_user << RESET << std::endl;
     std::cin.ignore(100, '\n');
     std::cout << "Tekan Enter untuk lanjut...";
@@ -22,10 +24,10 @@ void tarikTunai(long long &saldo_user) {
     std::cin >> tunai;
 
     if (tunai > saldo_user) {
-        std::cout << "Tidak bisa menarik tunai! Saldo yang ingin anda tarik melebihi saldo Anda yang sekarang";
+        std::cout << "Tidak bisa menarik tunai! Saldo yang ingin anda tarik melebihi saldo Anda yang sekarang\n";
         return;
     }
     saldo_user -= tunai;
 
-    std::cout << "Tarik tunai berhasil! Anda telah menarik tunai sebesar " << tunai;
+    std::cout << "Tarik tunai berhasil! Anda telah menarik tunai sebesar Rp " << tunai << endl;
 }

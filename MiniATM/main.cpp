@@ -1,6 +1,8 @@
 #include "function.h"
 #include <iostream>
 #include <cstdio>
+#include <thread>
+#include <chrono>
 using namespace std;
 
 int main () {    
@@ -31,6 +33,10 @@ int main () {
             break;
         case '3':
             tarikTunai(saldo_user);
+            break;
+        case '4':
+            std::cout << "Terima kasih sudah menggunakan layanan kami!" << endl;
+            std::this_thread::sleep_for(chrono::seconds(1));
             break;
         default:
             std::cout << MERAH << "Tidak Valid, silahkan pilih 1-4!";
