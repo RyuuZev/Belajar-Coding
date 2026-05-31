@@ -6,8 +6,6 @@ print("(-) untuk mengurangkan angka")
 print("(*) untuk mengalikan angka")
 print("(/) untuk membagi angka\n")
 
-konfirmasi = True
-
 # fungsi untuk menghitung
 def hitung(a, op, b):
     if op == "+":
