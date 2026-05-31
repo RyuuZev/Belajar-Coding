@@ -11,7 +11,7 @@ int main() {
     do {
 
     std::cout << "\n=== KALKULATOR CLI ===" << endl;
-    std::cout << "Ini adalah sebuah kalkulator CLi alias berbasis perintah doang" << endl;
+    std::cout << "Ini adalah sebuah kalkulator CLI alias berbasis perintah doang" << endl;
     std::cout << "Operator (+) untuk menambah angka" << endl;
     std::cout << "Operator (-) untuk mengurang angka" << endl;
     std::cout << "Operator (*) untuk mengkali angka" << endl;
