@@ -1,9 +1,24 @@
 #include <iostream>
+#include <chrono>
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
+
+int a[1000000];
 
 int main() {
     
-    int a[100] = {71, 12, 95, 38, 4, 83, 27, 60, 19, 99, 46, 7, 54, 31, 88, 15, 73, 2, 67, 42, 91, 24, 58, 10, 79, 35, 97, 51, 18, 64, 29, 85, 6, 75, 40, 22, 93, 48, 13, 56, 81, 33, 100, 17, 69, 44, 8, 62, 26, 89, 52, 3, 77, 36, 94, 20, 65, 11, 84, 47, 30, 72, 5, 59, 23, 98, 41, 14, 86, 53, 1, 68, 32, 90, 25, 57, 16, 80, 43, 9, 74, 37, 96, 21, 63, 28, 87, 50, 34, 82, 45, 66, 39, 92, 55, 70, 49, 76, 61, 78};
+    for (int i = 0; i < 1000000; i++) {
+        a[i] = i + 1;
+    }
+
+    srand(time(NULL));
+
+    for (int i = 999999; i > 0; i--) {
+        int j = rand() % (i + 1);
+        swap(a[i], a[j]);
+    }
 
     int n = sizeof(a) / sizeof(a[0]); 
 
@@ -17,6 +32,8 @@ int main() {
 
     cout << "\n\nSesudah disorting: \n\n";
 
+    auto start = chrono::high_resolution_clock::now();
+
     for (int i = 0 ; i < n - 1 ; i++) {
         for (int j = i + 1 ; j < n ; j++) {
             if (a[i] > (a[j])) {
@@ -25,11 +42,22 @@ int main() {
         }
     }
 
+    auto stop = chrono::high_resolution_clock::now();
+
     for (int i = 0; i < n; i++) {
         cout << a[i] << " ";
     }
+
+    auto duration = chrono::duration_cast<chrono::microseconds>(stop - start);
+
+    cout << "\n\nWaktu eksekusi: " << duration.count() << " Mikrodetik atau " << duration.count() / 1000000 << " Detik.";
 
     return 0;
 
 }
 
+// Percobaan di spek laptop i7 13620h, Axioo Pongo 735
+// Bubble Sort 100 ribu data didapatkan hasil eksekusi 31 detik
+// Sedangkan 1 juta memerlukan 906 detik
+// Kompleksitas waktunya adalah O(n^2), karena nested loop algoritma perlu 2 kali lipat memeriksa
+// Secara teori, algoritma O(n^2) akan membutuhkan waktu sekitar X^2 kali lebih besar ketika ukuran input dinaikkan X kali. Ketika data sudah lebih besar dari kapasitas cache CPU, performa bisa memburuk lebih jauh karena banyak cache miss dan akses ke RAM yang latensinya jauh lebih tinggi.
