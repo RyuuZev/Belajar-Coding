@@ -32,11 +32,12 @@
 //     console.log('salah');
 // }// 
 
-// if (0.5 <= 0) {
+// if (0.5 <= 0) { 
 //     console.log('benar');
 // } else {
 //     console.log('salah');
 // }
+
 
 const val1 = 'abc' === 'abc';
 const val2 = false !== true;

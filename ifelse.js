@@ -19,13 +19,13 @@ if (angka >= 1000) {
 
 // versi dari satuan
 
-let angkah = 100;
+let num = 100;
 
-if (angkah < 10) {
+if (num < 10) {
     console.log(`satuan`);
-} else if (angkah < 100) {
+} else if (num < 100) {
     console.log(`puluhan`);
-} else if (angkah < 1000) {
+} else if (num < 1000) {
     console.log(`ratusan`);
 } else {
     console.log(`ribuan`);
