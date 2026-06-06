@@ -38,7 +38,7 @@ void begoSort(std::vector<int>& arr) {
 }
 
 int main() {
-    std::vector<int> data = {1, 3, 4, 2, 5, 7, 6, 9, 8, 10, 12, 11}; 
+    std::vector<int> data = {1, 3, 2, 4}; 
 
     std::cout << "Data awal (" << data.size() << " elemen): ";
     for (int num : data) std::cout << num << " ";
