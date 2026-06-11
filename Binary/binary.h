@@ -1,11 +1,11 @@
 #ifndef binary_h
 #define binary_h
 #include <algorithm>
+#include <vector>
+#include <iostream>
 
-int binarySearch(int arr[], int n, int target) {
+using namespace std;
 
-    
-
-}
+int binarySearch(vector<int>& arr, int target);
 
 #endif

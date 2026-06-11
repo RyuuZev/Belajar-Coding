@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int linearSearch(int arr[], int target, int n) {
+int linearSearch(string arr[], int n, string target) {
     for (int i = 0; i < n; i++) {
         if (arr[i] == target) {
             return i;
@@ -13,20 +13,25 @@ int linearSearch(int arr[], int target, int n) {
 
 int main() {
 
-    int arr[10] = {1, 3, 2, 4, 5, 6, 8, 7, 9, 10};
-    int target;
-    int n = size(arr);
+    string p1[] = {"Abrar", "Rama", "Dhani", "Dilon", "Rama", "Rifky"};
+    int n = size(p1);
 
-    cout << "Array A : ";
-    for (int x : arr) {
-        cout << x << " ";
+    cout << "Orang orang di Paralel 1: ";
+    for (const string& x : p1) {
+        cout << x << ", ";
     }
 
-    cout << "\nPilih angka: ";
+    string target;
+    cout << "\nMasukkan nama orang yang Anda ingin ketahui letak indexnya: ";
     cin >> target;
 
-    int hasil = linearSearch(arr, target, n);
-    cout << "\nAngka yang anda pilih adalah index ke-" << hasil;
+    int hasil = linearSearch(p1, n, target);
+
+    if (hasil != -1) {
+        cout << "Nama " << target << " ditemukan pada index ke-" << hasil << endl;
+    } else {
+        cout << "Nama " << target << " tidak ditemukan dalam index." << endl;
+    };
 
     return 0;
 }
