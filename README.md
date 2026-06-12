@@ -1,6 +1,6 @@
 # Belajar-Coding
 
-Kumpulan latihan dan contoh kode untuk belajar pemrograman. Kebanyakan C++ (algoritma & contoh), juga ada beberapa file JavaScript, Java, dan Python. Saya pakai repo ini sebagai catatan pribadi — tapi siapa saja boleh pakai.
+Kumpulan latihan dan contoh kode untuk belajar pemrograman.
 
 Daftar isi
 - [Ringkasan](#ringkasan)
